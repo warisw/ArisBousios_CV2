@@ -2,11 +2,14 @@ const open = document.getElementById("open");
 const close = document.getElementById("close");
 const container = document.querySelector(".container");
 const body = document.querySelector("body");
+const nav = document.querySelector("nav");
 open.addEventListener("click", () => container.classList.add("show-nav"));
 open.addEventListener("click", () => body.classList.add("show-nav"));
+open.addEventListener("click", () => nav.classList.add("show-nav"));
 
 close.addEventListener("click", () => container.classList.remove("show-nav"));
 close.addEventListener("click", () => body.classList.remove("show-nav"));
+close.addEventListener("click", () => nav.classList.remove("show-nav"));
 
 //scroll top//
 

@@ -348,12 +348,16 @@ nav {
   left: 0;
   z-index: -1;
 }
-
+nav.show-nav {
+  z-index: 1000;
+}
 nav ul {
   list-style-type: none;
   padding-left: 30px;
 }
-
+.nav__links {
+  color: rgb(131, 70, 70);
+}
 nav ul li {
   text-transform: uppercase;
   color: rgb(131, 70, 70);
@@ -364,6 +368,7 @@ nav ul li {
 
   background-color: rgb(25, 25, 25);
   display: flex;
+
   align-items: center;
   justify-content: center;
   padding-left: 5px;
