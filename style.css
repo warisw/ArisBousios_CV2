@@ -44,6 +44,8 @@ body {
   font-size: var(--normal-font-size);
   position: absolute;
   overflow-y: scroll;
+
+  height: fit-content;
 }
 
 h1,
@@ -72,22 +74,21 @@ img {
   height: auto;
 }
 .container {
-  background-color: rgb(241, 234, 234);
+  background-color: var(--container-color);
+
   transform-origin: top left;
   transition: transform 0.5s linear;
-  width: 100vw;
-  min-height: 100vh;
   padding: 50px;
   border-style: solid;
   border-color: rgb(104, 55, 55);
 }
 .resume {
-  max-width: 2000px;
+  max-width: max-content;
+  max-height: max-content;
   margin: 50px auto;
 }
 
 .bd-container {
-  max-width: 968px;
   width: calc(100%-3rem);
 }
 
@@ -140,6 +141,7 @@ img {
 .social__container {
   grid-template-columns: max-content;
   gap: 1rem;
+  margin-top: var(--mb-2);
 }
 
 .social__link {
@@ -161,6 +163,7 @@ img {
 /* ~~~~~~~~~~PROFILE~~~~~~~~~~ */
 .profile__description {
   text-align: center;
+  margin-top: var(--mb-2);
 }
 
 /* ~~~~~~~~~~EDUCATION/EXP~~~~~~~~~~ */
@@ -207,7 +210,9 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
-
+.education__container {
+  margin-top: var(--mb-2);
+}
 .education__year,
 .experience__year {
   font-size: var(--smaller-font-size);
@@ -219,6 +224,10 @@ img {
 .languages__content {
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
+}
+.skills__container,
+.languages__container {
+  margin-top: var(--mb-2);
 }
 
 .skills__name,
@@ -241,7 +250,50 @@ img {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
 }
+.certificates__container {
+  margin-top: var(--mb-2);
+}
+/* ~~~~~~~~~~INTERESTS~~~~~~~~~~ */
 
+.interests__container {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mb-2);
+}
+
+.interests__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests__icon {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+/* ~~~~~~~~~~SCROLLTOP~~~~~~~~~~ */
+.scrolltop {
+  position: fixed;
+  right: 2rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: var(--container-color-alt);
+  border-radius: 0.3rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  background-color: rgb(25, 25, 25);
+}
+.scrolltop__icon {
+  font-size: 2.2rem;
+  color: rgb(131, 70, 70);
+}
+.show-scroll {
+  visibility: visible;
+  bottom: 8rem;
+}
 /* ~~~~~~~~~~CIRCLE~~~~~~~~~~ */
 .circle-container {
   position: fixed;
@@ -325,6 +377,52 @@ nav ul li {
 nav ul li i {
   margin-right: 2px;
 }
+body.show-nav {
+  overflow-y: hidden;
+}
+
 .container.show-nav {
   transform: rotate(-21deg);
+}
+
+/* ~~~~~~~~~~~~~ */
+
+@media screen and (min-width: 800px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resume {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    background-color: var(--container-color);
+    box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
+  }
+  .resume__left {
+    background-color: var(--container-color-alt);
+  }
+  .resume__left,
+  .resume__right {
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+  }
+  .section-title,
+  .profile__description {
+    text-align: initial;
+  }
+  .resume__right {
+    margin-top: 8.5rem;
+  }
+  .home__container {
+    gap: 1.5rem;
+  }
+  .languages__content {
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 3.5rem;
+  }
+  .interests__content {
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 3.5rem;
+  }
 }

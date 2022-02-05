@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -22,9 +26,11 @@
           <button id="close">
             <i class="fas fa-times"></i>
           </button>
-          <button id="open">
-            <i class="fas fa-bars"></i>
-          </button>
+          <a href="#" class="scroll">
+            <button id="open">
+              <i class="fas fa-bars"></i>
+            </button>
+          </a>
         </div>
       </div>
       <div class="resume">
@@ -118,37 +124,39 @@
 
           <section class="skills section" id="skills">
             <h2 class="section-title">SKILLS</h2>
-            <div class="skills__content bd-grid">
-              <ul class="skills__data">
-                <li class="skills__name">
-                  <span class="skills__circle"></span> Html
-                </li>
+            <div class="skills__container">
+              <div class="skills__content bd-grid">
+                <ul class="skills__data">
+                  <li class="skills__name">
+                    <span class="skills__circle"></span> Html
+                  </li>
 
-                <li class="skills__name">
-                  <span class="skills__circle"></span> Css
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>JavaScript
-                </li>
-                <!-- <li class="skills__name">
+                  <li class="skills__name">
+                    <span class="skills__circle"></span> Css
+                  </li>
+                  <li class="skills__name">
+                    <span class="skills__circle"></span>JavaScript
+                  </li>
+                  <!-- <li class="skills__name">
                   <span class="skills__circle"></span>
                 </li>
                 <li class="skills__name">
                   <span class="skills__circle"></span>
                 </li> -->
-              </ul>
+                </ul>
 
-              <ul class="skills__data">
-                <li class="skills__name">
-                  <span class="skills__circle"></span> C++
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span> Java
-                </li>
-                <li class="skills__name">
-                  <span class="skills__circle"></span>Sql [Mysql]
-                </li>
-              </ul>
+                <ul class="skills__data">
+                  <li class="skills__name">
+                    <span class="skills__circle"></span> C++
+                  </li>
+                  <li class="skills__name">
+                    <span class="skills__circle"></span> Java
+                  </li>
+                  <li class="skills__name">
+                    <span class="skills__circle"></span>Sql [Mysql]
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
         </div>
@@ -182,7 +190,7 @@
               <div class="experience__content">
                 <div class="experience__time">
                   <span class="experience__rounder"></span>
-                  <span class="experience__line"></span>
+                  <!-- <span class="experience__line"></span> -->
                 </div>
 
                 <div class="experience__data bd-grid">
@@ -204,21 +212,23 @@
           </section>
 
           <section class="certificates section" id="certificates">
-            <h2 class="section title">CERTIFICATES</h2>
-            <div class="certificate__content">
-              <h3 class="certificate__title">
-                [2018] English Proficiency C2 Certification
-              </h3>
-              <p class="certificate__description">
-                For proving English Oral and written Fluency.
-              </p>
+            <h2 class="section__title">CERTIFICATES</h2>
+            <div class="certificates__container">
+              <div class="certificate__content">
+                <h3 class="certificate__title">
+                  [2018] English Proficiency C2 Certification
+                </h3>
+                <p class="certificate__description">
+                  For proving English Oral and written Fluency.
+                </p>
+              </div>
             </div>
           </section>
 
           <section class="languages section">
-            <h2 class="section title">LANGUAGES</h2>
+            <h2 class="section-title">LANGUAGES</h2>
 
-            <div class="languages_container">
+            <div class="languages__container">
               <ul class="languages__content bd-grid">
                 <li class="languages__name">
                   <span class="languages__circle"></span> Greek [Native]
@@ -232,8 +242,30 @@
               </ul>
             </div>
           </section>
+
+          <section class="interests section">
+            <h2 class="section-title">INTERESTS</h2>
+
+            <div class="interests__container bd-grid">
+              <div class="interests__content">
+                <i class="bx interests__icon bx-run"></i>
+                <span class="interests__name">
+                  Track & Field | <br />60-100m Sprinter</span
+                >
+              </div>
+              <div class="interests__content">
+                <i class="bx interests__icon bxs-book"></i>
+                <span class="interests__name">
+                  Book Reading of <br />Personal Interest
+                </span>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
+      <a href="#" class="scrolltop" id="scroll-top">
+        <i class="bx scrolltop__icon bx-arrow-to-top"></i>
+      </a>
     </div>
     <nav>
       <ul>
@@ -242,6 +274,7 @@
         <li><i class="fas fa-envelope"> Contact</i></li>
       </ul>
     </nav>
+
     <script src="script.js"></script>
   </body>
 </html>
